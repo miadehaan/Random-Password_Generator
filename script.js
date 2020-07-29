@@ -1,15 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var lowLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperLetters= [];
+var upperLetters= []; //see for loop below
 var specialChar = ['@', '#', '$', '%', '/', '_', '*'];
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// for(var i=0; i < lowLetters.length; i++) {
-//   upperLetters[i] = [lowLetters[i].toUpperCase()];
-// }
-// console.log(lowLetters);
-// console.log(upperLetters);
+for(var i=0; i < lowLetters.length; i++) {
+  var x = lowLetters[i].toUpperCase();
+  upperLetters[i] = x;
+}
 
 //Prompt the user for specific criteria
 var userLength = prompt("Input the number of characters (8-128) you would like your password to be: ");
@@ -27,7 +26,7 @@ for(var i=0; i < lowLetters.length; i++) {
   }
 }
 for(var i=0; i < upperLetters.length; i++) {
-    if (userLowercase) {
+    if (userUppercase) {
       values.push(upperLetters[i]);
     }
 }
