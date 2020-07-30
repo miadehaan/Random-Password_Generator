@@ -1,40 +1,25 @@
 # bootcamp-week3-hw
-Homework 3 - Random Password Generator
+Random Password Generator
+
+About:
+
+This application prompts the user for specific criteria and generates a random password. The criteria includes the desired length of the password and if they would like to include: lowercase letters, uppercase letters, numberic values, and/or special characters. 
+
+```
 
 Instructions:
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
-
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+The code ensures that the user inputs a valid character length between 8-128. If the user inputs a value outside of that range, an alert is displayed telling the user to refresh and input a valid length. Similarly, the user is also required to select at least one character type in order for the password generator to work. An alert is displayed if the user does not select one and instructs them to refresh the page and select at least one. Once the user provides valid responses, the user can press the button on the screen to generate a new password. The button can be repeatedly pressed to generate new passwords with the same original criteria. If new criteria is desired, the page has to be refreshed. 
 
 ```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
+Code:
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+This code utlizes Javascript's for-loops, if-else statements, and functions in order to make the page interactive and fuctional. 
 
-The following image demonstrates the application functionality:
-
-![password generator demo](./Assets/03-javascript-homework-demo.png) 
 
 # Links
+
+![password generator demo](./Assets/03-javascript-homework-demo.png)
 
 [URL of Deployed Application]()
 
