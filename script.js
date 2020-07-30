@@ -5,6 +5,7 @@ var upperLetters= []; //see for loop below
 var specialChar = ['@', '#', '$', '%', '/', '_', '*'];
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+//Generate array for 'upperLetters' by using the array 'lowLetters'
 for(var i=0; i < lowLetters.length; i++) {
   var x = lowLetters[i].toUpperCase();
   upperLetters[i] = x;
@@ -20,25 +21,30 @@ var values = [];
 
 
 //Create an array with all possible characters that user has specified
-for(var i=0; i < lowLetters.length; i++) {
-  if (userLowercase) {
-    values.push(lowLetters[i]);
+if (userLength >= 8 && userLength <= 128) {
+  for(var i=0; i < lowLetters.length; i++) {
+    if (userLowercase) {
+      values.push(lowLetters[i]);
+    }
+  }
+  for(var i=0; i < upperLetters.length; i++) {
+      if (userUppercase) {
+        values.push(upperLetters[i]);
+      }
+  }
+  for(var i=0; i < numbers.length; i++) {
+      if (userNumeric){
+        values.push(numbers[i]);
+      }
+  }
+  for(var i=0; i < specialChar.length; i++) {
+      if (userChar) {
+        values.push(specialChar[i]);
+      }
   }
 }
-for(var i=0; i < upperLetters.length; i++) {
-    if (userUppercase) {
-      values.push(upperLetters[i]);
-    }
-}
-for(var i=0; i < numbers.length; i++) {
-    if (userNumeric){
-      values.push(numbers[i]);
-    }
-}
-for(var i=0; i < specialChar.length; i++) {
-    if (userChar) {
-      values.push(specialChar[i]);
-    }
+else {
+  alert("ERROR: Please refresh page & input a number between 8 & 128 for the number of characters you would like.");
 }
 
 console.log("Values: " + values);
