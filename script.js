@@ -19,6 +19,13 @@ var userNumeric = confirm("Would you like to include numbers?");
 var userChar = confirm("Would you like to include special characters?");
 var values = [];
 
+//Validate the user's selections and display it back
+alert("You want a password with " + userLength + " characters and the following criteria: " + "\r\n" +
+"Lowercase Letters: " + userLowercase + "\r\n" +
+"Uppercase Letters: " + userUppercase + "\r\n" +
+"Numeric Values: " + userNumeric + "\r\n" +
+"Special Characters: " + userChar );
+
 
 //Create an array with all possible characters that user has specified
 if (userLength >= 8 && userLength <= 128) {
