@@ -21,6 +21,6 @@ This code utlizes Javascript's for-loops, if-else statements, and functions in o
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-[URL of Deployed Application]()
+[URL of Deployed Application](https://miadehaan.github.io/Random-Password_Generator/)
 
-[GitHub Repository]()
+[GitHub Repository](https://github.com/miadehaan/Random-Password_Generator)
