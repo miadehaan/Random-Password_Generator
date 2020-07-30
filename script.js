@@ -28,26 +28,33 @@ alert("You want a password with " + userLength + " characters and the following 
 
 
 //Create an array with all possible characters that user has specified
+//Ensure that the user inputs a valid character length and selects at least 1 character type
 if (userLength >= 8 && userLength <= 128) {
-  for(var i=0; i < lowLetters.length; i++) {
-    if (userLowercase) {
-      values.push(lowLetters[i]);
+  if (userLowercase == false && userUppercase == false && userNumeric == false && userChar == false) {
+    alert("ERROR: Please refresh page & select at least 1 charactype for your password.");
+  }
+  else {
+
+    for(var i=0; i < lowLetters.length; i++) {
+      if (userLowercase) {
+        values.push(lowLetters[i]);
+      }
     }
-  }
-  for(var i=0; i < upperLetters.length; i++) {
-      if (userUppercase) {
-        values.push(upperLetters[i]);
-      }
-  }
-  for(var i=0; i < numbers.length; i++) {
-      if (userNumeric){
-        values.push(numbers[i]);
-      }
-  }
-  for(var i=0; i < specialChar.length; i++) {
-      if (userChar) {
-        values.push(specialChar[i]);
-      }
+    for(var i=0; i < upperLetters.length; i++) {
+        if (userUppercase) {
+          values.push(upperLetters[i]);
+        }
+    }
+    for(var i=0; i < numbers.length; i++) {
+        if (userNumeric){
+          values.push(numbers[i]);
+        }
+    }
+    for(var i=0; i < specialChar.length; i++) {
+        if (userChar) {
+          values.push(specialChar[i]);
+        }
+    }
   }
 }
 else {
