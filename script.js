@@ -43,7 +43,8 @@ function generatePassword() {
   //Ensure that the user inputs a valid character length and selects at least 1 character type
   if (userLength >= 8 && userLength <= 128) {
     if (userLowercase == false && userUppercase == false && userNumeric == false && userChar == false) {
-      alert("ERROR: Please refresh page & select at least 1 charactype for your password.");
+      alert("ERROR: Please select at least 1 charactype for your password.");
+      return;
     }
     else {
 
@@ -70,7 +71,8 @@ function generatePassword() {
     }
   }
   else {
-    alert("ERROR: Please refresh page & input a number between 8 & 128 for the number of characters you would like.");
+    alert("ERROR: Please input a number between 8 & 128 for the number of characters you would like.");
+    return;
   }
 
   console.log("Values: " + values);
